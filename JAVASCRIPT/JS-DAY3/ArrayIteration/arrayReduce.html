@@ -1,0 +1,31 @@
+<!-- The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+
+The reduce() method works from left-to-right in the array. See also reduceRight().
+
+The reduce() method does not reduce the original array.
+
+This example finds the sum of all numbers in an array: -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.reduce()</h2>
+<p>This example finds the sum of all numbers in an array:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction); //declare variable and call the functions
+
+document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value, index, array) { //passing 4 arguments
+  return total + value;  // returns sum of all numbers in an array
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+
+<!-- How to use ES6 for...of loop in JavaScript? -->
+
+<!-- for...of loop. -->
+<!-- 
+ES6 introduced a new loop construct, for...of loop. 
+The best thing about for/of loop is that it provides an
+ easy way to loop through iterable objects such as array, string, Map, Set, arguments objects, 
+ custom iterables and array-like structures (NodeList).
+
+ SYNTAX:
+
+for(variable of iterable){
+	//loop body
+}
+
+The variable is declared using let, const or var keyword. of is a keyword.
+
+The for/of loop runs once for each element present in the iterable. And in each iteration, 
+the current processing element is assigned to the variable. -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript for of loop example</h2>
+
+
+<p>Calculate the sum of all the elements of an array </p>
+
+
+<script>
+   
+   let naturalNumbers = [1, 2, 3, 4, 5, 6], total=0;
+for(let number of naturalNumbers){
+  total += number;
+}
+console.log(`The sum of numbers is ${total}`);
+</script>
+
+</body>
+</html>
+
+ <!-- Questions
+<div>
+  <p>Exercise1:
+     Calculate total price of this shoppingCart array
+    shoppingCart = [
+  {pdtName:'Amazon Echo Dot 4th Gen', price:49.99},
+  {pdtName:'Amazon Smart Plug', price:24.99},
+  {pdtName:'Amazon Fire TV Stick', price:29.99}
+]
+
+Expected output: Total price is 104.97
+  </p>
+</div> -->

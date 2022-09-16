@@ -1,0 +1,19 @@
+<!-- Regular expression -->
+<!-- A JavaScript Regular Expression is an object, describing a pattern of characters in JavaScript. 
+These help to match character combinations in a String.  -->
+
+
+<html>
+  <body>
+    <script>
+      var email = prompt("Enter an email address");
+      var myRe = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // regular expression for validation
+      var checkEmail = myRe.exec(email); // check validity using myRe
+      if(checkEmail){
+        document.write("You entered the email: " + email);
+      }else{
+        document.write("This is not a valid email address.");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Stack Implementation in Javascript</h1>
+    <h2>It follows last in First out(LIFO) and first in last out(FILO)</h2>
+    <script>
+        class Stack{
+            constructor(){
+                this.myArray=[];
+            }
+            addElement(data){
+                //method add element at top of stack
+                this.myArray.push(data);
+            }
+            removeElement(){
+                //method return the top most element of stack and remove it
+                if(this.isEmpty())
+                return "UnderFlow";
+                else
+                return this.myArray.pop();
+            }
+            peek(){
+                // returns the topmost element without removing it from stack
+                if(this.isEmpty())
+                return "No elements in the stack";
+                else
+                return this.myArray[this.myArray.length-1];
+            }
+            isEmpty(){
+        
+                // return empty array if it is
+                return this.myArray.length==0;
+            }
+            printStack(){
+                 // print the stack in array format
+                var str=" ";
+                for(var i=0;i<this.myArray.length;i++){
+                    str+=this.myArray[i]+",";
+                }
+                return str;
+            }
+        }
+        
+        //usage
+        var s=new Stack();
+        document.write("Students in the stack  are:"+s.printStack()+"<br>");
+        document.write("The student in the topmost position of stack is:"+s.peek()+"<br>");
+        document.write("Is the stack is empty:"+s.isEmpty()+"<br>");
+        document.write("Remove a student from the stack:"+s.removeElement()+"<br>");
+        s.addElement("Sushant");
+        s.addElement("Umakant");
+        s.addElement("Ashutosh");
+        s.addElement("Vasu");
+        s.addElement("Ankit");
+        s.addElement("Rahul");
+        s.addElement("Abhineet");
+        document.write("Students in the stack  are:"+s.printStack()+"<br>");
+        document.write("<br>");
+        document.write("The student in the topmost position of stack is:"+s.peek()+"<br>");
+        document.write("Remove a student from the stack:"+s.removeElement()+"<br>");
+        document.write("The student in the topmost position of stack is:"+s.peek()+"<br>");
+        document.write("Remove a student from the stack:"+s.removeElement()+"<br>");
+        document.write("Remove a student from the stack:"+s.removeElement()+"<br>");
+        document.write("Students in the stack now are:"+s.printStack()+"<br>");
+        s.addElement("Abhishek");
+        document.write("Students in the stack are after adding an element in it:"+s.printStack()+"<br>");
+
+
+
+
+    </script>
+</body>
+</html>

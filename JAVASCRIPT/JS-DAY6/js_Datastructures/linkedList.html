@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           class LinkedList{
+               constructor(data){
+                   this.head={
+                       value:data,
+                       next:null
+                   }
+                   this.tail=this.head;
+                   this.length=1;
+               }
+
+               addDataEnd(data){
+                // adds an element at the end of list
+                   const newNode={
+                       value:data,
+                       next:null
+                   }
+                   this.tail.next=newNode;
+                   this.tail=newNode;
+                   this.length++;
+               }
+
+               addDataFront(data){
+                // adds an element at the front of list
+                   const newNode={
+                       value:data,
+                       next:null
+                   }
+                   newNode.next=this.head;
+                   this.head=newNode;
+               }
+
+               traverse(req){
+                // traversing at the each node of data
+                  let counter=0;
+                  let currentNode=this.head;
+                  while(counter!=req){
+                      counter++;
+                      currentNode=currentNode.next;
+                  }
+                  return currentNode;
+               }
+
+               insertData(index,data){
+                // inserting data at particular node of the linkedlist 
+                   const newNode={
+                       value:data,
+                       next:null
+                   }
+                   const leadNode=this.traverse(index-1);
+                   const nextNode=leadNode.next;
+                   leadNode.next=newNode;
+                   newNode.next=nextNode;
+               }
+
+               deleteData(index){
+                // delete data at particualr index of the node in linkedlist
+                   const  leadNode=this.traverse(index-1);
+                   const deleteNode=leadNode.next;
+                   const nextNode=deleteNode.next;
+                   leadNode.next=nextNode;
+                   this.length--;
+               }
+
+               displayLinkedList(){
+                // printing the required linkedlist
+                   const myArray=[];
+                   let currentNode=this.head;
+                   while(currentNode!=null){
+                       myArray.push(currentNode.value);
+                       currentNode=currentNode.next;
+                   }
+                   document.write(myArray.join('--->')+"<br><br>");
+               }
+           }
+
+           //usuage
+
+           const myList=new LinkedList("Rahul");
+           document.write("Adding first data into linked list:"+"<br>")
+           myList.displayLinkedList();
+           document.write("Adding  data into linked list at the end:"+"<br>")
+           myList.addDataEnd("Karan");
+           myList.addDataEnd("Ashutosh");
+           myList.addDataEnd("Ankit");
+           myList.displayLinkedList();
+           document.write("Adding  data into linked list at the front of linked list:"+"<br>")
+           myList.addDataFront("Sushant");
+           myList.displayLinkedList();
+           document.write("Inserting  data into linked list at particular index of linked list at index 1:"+"<br>")
+           myList.insertData(1,"Mudit");
+           myList.displayLinkedList();
+           document.write("Deleting  data into linked list at particular index of linked list:"+"<br>")
+           myList.deleteData(2);
+           myList.displayLinkedList();
+         
+
+    
+    </script>
+</body>
+</html>

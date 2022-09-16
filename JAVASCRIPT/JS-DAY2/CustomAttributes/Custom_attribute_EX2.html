@@ -1,0 +1,47 @@
+<!-- Example 2: In this example, we will see another way of accessing data attributes is by using dataset property.
+ This property returns a DOMStringMap object with one entry for each custom data attribute.
+  
+ A DOMStringMap key is a transformed form of custom data attribute. The “data-” prefix is removed from the attribute name.
+   Any hyphen in the name is also removed. In this way, we get a camelCase name.
+
+    The attributes can then be accessed using the camelCase name stored in the object as a key like element.dataset.keyname or element.
+    dataset[keyname]. We will take lists of foods. The custom attributes will contain food-type.
+
+     The onclick attribute will trigger the JavaScript when an item is clicked. -->
+
+     <!DOCTYPE html>
+<html>
+
+<head>
+	<title>Custom attributes</title>
+</head>
+
+<body>
+	<h3>Hi</h3>
+	<ul>
+		<!-- When you click li element  function (handleFood) will call -->
+		<li onclick="handleFood(this)" 
+			data-food-type="fruit">
+			Apple
+		</li>
+		
+		<li onclick="handleFood(this)"
+			data-food-type="vegitable">
+			Potato
+		</li>
+		
+		<li onclick="handleFood(this)"
+			data-food-type="veg">
+			Cabbage
+		</li>
+		
+		<li onclick="handleFood(this)"
+			data-food-type="non-veg">
+			Chicken
+		</li>
+	</ul>
+	<!-- external js added -->
+	<script src="custom_attributes.js"></script> 
+</body>
+
+</html>

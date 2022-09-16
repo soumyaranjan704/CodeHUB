@@ -1,0 +1,39 @@
+
+
+<!-- Add many events on the same button  -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Element Object</h1>
+<h2>The addEventListener() Method</h2>
+
+<p>Attach a click event to a button:</p>
+<!-- create a button with a specific id -->
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+const element = document.getElementById("myBtn");
+//The addEventListener() method attaches an event handler to an element.
+element.addEventListener("mouseover", myFunction);//mouseover time myFunction method will call.
+element.addEventListener("mouseout", myThirdFunction);//mouseout time myThirdFunction method will call.
+
+element.addEventListener("click", function() {//click time it will work
+  document.getElementById("demo").innerHTML = "Hello World";
+});
+
+function myFunction() {
+  document.getElementById("demo").innerHTML += "Moused over!<br>"
+}
+
+function myThirdFunction() {
+  document.getElementById("demo").innerHTML += "Moused out!<br>"
+}
+</script>
+
+</body>
+</html>

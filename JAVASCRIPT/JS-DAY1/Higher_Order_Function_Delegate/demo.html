@@ -1,0 +1,214 @@
+<html>
+<title>
+    This demo will showcase the notes demo
+</title>
+
+<head>
+    <script src="help.js"></script>
+    <script>
+
+        window.onload = onInit;
+        var last_div_top = 0;
+        var last_div_left = 0;
+        var rnd_number = 1;
+        var rnd_numbers = [];
+
+
+        function onInit() {
+            console.log('inside onInit');
+            document.getElementById('btnSerialization').addEventListener('mouseenter', function () {
+                console.log('inside onhover');
+                document.getElementById('btnSerialization').classList.remove('cssNormal');
+                document.getElementById('btnSerialization').classList.add('cssRound');
+            });
+
+            document.getElementById('btnSerialization').addEventListener('mouseout', function () {
+                console.log('inside onmouseout');
+                document.getElementById('btnSerialization').classList.remove('cssRound');
+                document.getElementById('btnSerialization').classList.add('cssNormal');
+            });
+        }
+
+        function AddDiv() {
+
+            let div_container = document.getElementById('divContainer');
+
+            let div_new = document.createElement("div");
+            div_new.classList.add('divCircle');
+            div_new.innerHTML = "D" + GetRandomNumber();
+
+            //assuming the the top and left are 20 & 20
+            let top = 50;
+            let left = 10;
+
+            //in realtime the top and left has to be evaluated basde on how many elements has been published
+
+            div_new.style.top = top; // div_container.style.top == null || div_container.style.top == '' ? 50 + 10: div_container.style.top;
+            div_new.style.left = left; // div_container.style.left == null || div_container.style.left =='' ? 50 + 10: div_container.style.left;
+
+            div_container.appendChild(div_new);
+
+            var canvas = document.createElement("CANVAS");
+            const ctx = canvas.getContext('2d');
+            canvas.setAttribute('position','absolute');
+
+           // ctx.style.left = "100px";
+          //  ctx.style.top  = "100px";
+           // ctx.style.position = "absolute";
+
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            //ctx.moveTo(div_new.style.top, div_new.style.left);
+            //adding 10 to accomodate the width and height of div
+            //moveTo(x,y)
+            //20 --> width of the div - the left [position]
+            //20 --> height of div 
+            ctx.moveTo(10 + left,  20);
+            //ctx.moveTo(div_new.style.left + 10,  div_new.style.top + 20);
+            //ctx.moveTo(0 , 0);
+            ctx.lineTo(150, 100);
+            ctx.stroke();
+
+            div_container.appendChild(canvas);
+
+
+            //Adding the 2nd DIV
+
+            let div_new2 = document.createElement("div");
+            div_new2.classList.add('divCircle');
+            div_new2.innerHTML = "D" + GetRandomNumber();
+
+            //assuming the the top and left are 20 & 20
+            //Starting from where the canvas context ends
+            let top2 = 140;
+            let left2 = 150;
+
+            //in realtime the top and left has to be evaluated basde on how many elements has been published
+
+            div_new2.style.top = top2; // div_container.style.top == null || div_container.style.top == '' ? 50 + 10: div_container.style.top;
+            div_new2.style.left = left2; // div_container.style.left == null || div_container.style.left =='' ? 50 + 10: div_container.style.left;
+
+            div_container.appendChild(div_new2);
+
+            var canvas2 = document.createElement("CANVAS");
+            const ctx2 = canvas.getContext('2d');
+            canvas2.setAttribute('position','absolute');
+            ctx2.strokeStyle = 'blue';
+            ctx2.lineWidth = 2;
+            ctx2.beginPath();
+            //ctx.moveTo(div_new.style.top, div_new.style.left);
+            //adding 10 to accomodate the width and height of div
+            ctx2.moveTo(left2 , top2-40);
+            ctx2.lineTo(200, 170);
+            ctx2.stroke();
+
+            div_container.appendChild(canvas2);
+
+
+            //add Line 
+            // var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            // svg.setAttribute('height', "100");
+            // svg.setAttribute('width', "150");
+            // var line = document.createElement("line");
+            // line.setAttribute('x1', '0');
+            // line.setAttribute('y1', '0');
+            // line.setAttribute('x2', '50');
+            // line.setAttribute('y2', '50');
+            // line.setAttribute('style', 'stroke:rgb(255,0,0);stroke-width:2');
+            // svg.appendChild(line);
+            // // <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+            // //let svg_line = document.createElement('<svg height="210" width="500"><line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" /></svg>');
+            // div_container.appendChild(svg);
+
+
+        }
+
+        function GetRandomNumber() {
+            let num = Math.floor(Math.random() * 10);
+            if (rnd_numbers.includes(num) && rnd_numbers.length < 10) {
+                num = GetRandomNumber();
+            }
+            else {
+                rnd_numbers.push(num);
+            }
+            return num;
+        }
+
+
+    </script>
+
+    <style>
+        .cssRound {
+            border-radius: 15px 15px 15px 15px;
+        }
+
+        .divCircle {
+            border-radius: 10px 10px 10px 10px;
+            background-color: lightblue;
+            color:
+                black;
+            width: 20px;
+            height: 20px;
+            border: 1px solid;
+            font-size: xx-small;
+            text-align: center;
+            padding-top: 5px;
+            position: absolute;
+        }
+
+        .cssNormal {
+            border-radius: 1px 1px 1px 1px;
+        }
+
+        .divContainerClass {
+            border-radius: 15px 15px 15px 15px;
+            background-color:
+                lightgreen;
+            width: 200px;
+            height: 200px;
+            /* position: relative; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button onclick="demo1();">demo</button> -->
+    <input type="button" id="btnDemo" onclick="demo1();" value="demo" title="demo" />
+    <input type="button" id="btnSerialization" onclick="testSerialization();" value="serialization" title="demo" />
+
+    <input type="button" id="btnAddDiv" onclick="AddDiv();" value="Add Div" title="demo" />
+
+
+
+    <div id="divContainer" class="divContainerClass">
+        <!-- <svg height="210" width="500">
+            <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+        </svg> -->
+
+        divcontainer
+    </div>
+
+    <div id="divTest" onclick="method()" class="someclass">
+        <table>
+            <th>
+
+            </th>
+            <tr>
+                <td>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+    
+javascript 
+ --.> higher order function/function delegate
+-- classes and inheritance (ES6 standards)
+-- class constructors 
+-->

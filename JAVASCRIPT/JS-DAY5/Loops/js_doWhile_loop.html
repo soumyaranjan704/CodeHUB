@@ -1,0 +1,28 @@
+<!-- do while loop -->
+
+<!-- This is an exit controlled loop; the loop body executes at least once, even if the condition is not true. 
+This is because the condition is tested when the loop body ends.
+ If the condition returns true, the code inside the loop executes again. 
+ If it returns false, the JavaScript interpreter exits the loop. -->
+
+<!-- 
+ Syntax:
+ do
+{
+  //code executed at least once
+}while (condition); -->
+
+
+<html>
+  <body>
+    <script>
+      var iterator1 = 0; //iteration variable initialized with 0
+      do //enter loop
+      {
+        document.write(iterator1 + 1 + ". " + "Hi welcome to HelloWorld</br>"); 
+        iterator1++; //incrementing the value of the variable
+      }while (iterator1 < 5); //testing the condition
+      document.write("</br>Loop end"); //after ending the looping "Loop end message will show"
+    </script>
+  </body>
+</html>

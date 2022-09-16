@@ -1,0 +1,46 @@
+<!-- What is this?
+In JavaScript, the this keyword refers to an object.
+
+Which object depends on how this is being invoked (used or called).
+
+The this keyword refers to different objects depending on how it is used: -->
+
+
+
+
+<!-- 
+When used in an object method, this refers to the object.
+
+In this example, this refers to the person object.
+
+Because the fullName method is a method of the person object. -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The JavaScript <i>this</i> Keyword</h1>
+<p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
+<p>Because <b>fullName</b> is a method of the person object.</p>
+
+<!-- value will store in this unique id "demo" -->
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+const person = {
+  firstName: "John", //properties and the values
+  lastName: "Doe",
+  id: 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName +" "+ this.id; 
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+
+</body>
+</html>

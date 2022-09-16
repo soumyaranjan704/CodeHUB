@@ -1,0 +1,50 @@
+<!-- Syntax:
+
+<element data-*="value"> -->
+    <!-- Two parts of the custom attributes:
+Attribute Name – The attribute name must be at least one character long after the prefix “data-“.
+ It should not contain any upper case letters.
+Attribute Value –  The value to be stored can be any string.
+Example 1: In this example, we will read the values of these attributes with JavaScript is quite simple.
+ In fact there are more than one way to do so. One simpler  way is using getAttribute() and setAttribute(). getAttribute() 
+ can be used to get the stored data from the attribute. It will either return a null or an empty string if the asked attribute 
+ does not exist. setAttribute() can be used to modify the value of any existing attribute or to add a new attribute.  -->
+
+
+ <!DOCTYPE html>
+<html>
+
+<head>
+	<title>custom attributes</title>
+</head>
+
+<body>
+	<h3>Hi</h3>
+	<ul>
+				<!-- When you click li element  function (showPosition) will call -->
+
+		<li onclick="showPosition(this)"
+			id="geek1" data-position="winner">
+			Geek1
+		</li>
+		
+		<li onclick="showPosition(this)"
+			id="geek2" data-position="runner up">
+			Geek2
+		</li>
+		
+		<li onclick="showPosition(this)"
+			id="geek3" data-position="third">
+			Geek3
+		</li>
+		
+		<li onclick="showPosition(this)"
+			id="geek4" data-position="lost">
+			Geek4
+		</li>
+	</ul>
+	
+	<script src="custom_attributes.js"></script>
+</body>
+
+</html>

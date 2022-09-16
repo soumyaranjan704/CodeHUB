@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Queue Implementation in Javascript</h1>
+    <h2>It follows First in First out</h2>
+    <script>
+        class Queue{
+            constructor(){
+                this.myArray=[];
+            }
+            addElement(data){
+                // add element at end of queue
+                this.myArray.push(data);
+            }
+            removeElement(){
+                // remove element at front of queue
+                if(this.isEmpty())
+                return "UnderFlow";
+                else
+                return this.myArray.shift();
+            }
+            front(){
+                // return the front elemnt/data in the queue
+                if(this.isEmpty())
+                return "No elements in the queue";
+                else
+                return this.myArray[0];
+            }
+            isEmpty(){
+                // return empty array if it is
+                return this.myArray.length==0;
+            }
+            printQueue(){
+                // print the queue in array format
+                var str=" ";
+                for(var i=0;i<this.myArray.length;i++){
+                    str+=this.myArray[i]+",";
+                }
+                return str;
+            }
+        }
+        
+        //usage
+        var q=new Queue();
+        document.write("Students in the queue  are:"+q.printQueue()+"<br>");
+        document.write("The student in the front position in queue is:"+q.front()+"<br>");
+        document.write("Is the queue is empty:"+q.isEmpty()+"<br>");
+        document.write("Remove a student from the queue:"+q.removeElement()+"<br>");
+        q.addElement("Sushant");
+        q.addElement("Umakant");
+        q.addElement("Ashutosh");
+        q.addElement("Vasu");
+        q.addElement("Ankit");
+        q.addElement("Rahul");
+        q.addElement("Abhineet");
+        document.write("Students in the queue  are:"+q.printQueue()+"<br>");
+        document.write("<br>");
+        document.write("The student in the front position in queue is:"+q.front()+"<br>");
+        document.write("Remove a student from the queue:"+q.removeElement()+"<br>");
+        document.write("The student in the front position in queue is:"+q.front()+"<br>");
+        document.write("Remove a student from the queue:"+q.removeElement()+"<br>");
+        document.write("Remove a student from the queue:"+q.removeElement()+"<br>");
+        document.write("Students in the queue are:"+q.printQueue()+"<br>");
+        q.addElement("Abhishek");
+        document.write("Students in the queue are:"+q.printQueue()+"<br>");
+
+
+
+
+
+    </script>
+</body>
+</html>

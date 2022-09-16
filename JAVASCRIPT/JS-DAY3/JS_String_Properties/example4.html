@@ -1,0 +1,29 @@
+<!-- Definition and Usage
+The replace() method searches a string for a value or a regular expression.
+
+The replace() method returns a new string with the value(s) replaced.
+
+The replace() method does not change the original string. -->
+
+
+<!-- Replace Microsoft: -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+<h2>The replace() Method</h2>
+
+<p>replace() searches a string for a value,
+and returns a new string with the specified value(s) replaced:</p>
+
+<p id="demo">Visit Microsoft!</p>
+
+<script>
+let text = document.getElementById("demo").innerHTML; 
+document.getElementById("demo").innerHTML = text.replace("Microsoft", "Antronsys");
+</script>
+
+</body>
+</html>

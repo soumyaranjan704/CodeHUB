@@ -1,0 +1,55 @@
+<!-- JavaScript Function Invocation
+
+The code inside a JavaScript function will execute when "something" invokes it.
+
+Invoking a JavaScript Function:
+
+The code inside a function is not executed when the function is defined.
+
+The code inside a function is executed when the function is invoked.
+
+It is common to use the term "call a function" instead of "invoke a function".
+
+It is also common to say "call upon a function", "start a function", or "execute a function".
+
+In this tutorial, we will use invoke, because a JavaScript function can be invoked without being called. -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>The global function (myFunction) returns the product of the arguments (a ,b):</p>
+<!-- Value will store in this p tag-->
+<p id="demo"></p>
+
+<script>
+
+
+function myFunction(a, b) {
+  return a * b;
+}
+document.getElementById("demo").innerHTML = myFunction(10, 2); //This method returns the element whose ID you passed in the function as an argument
+
+// function myFunction(a, b) {
+//     return a * b;
+//   }
+//   window.myFunction(10, 2);    // Will also return 20
+//myFunction() and window.myFunction() is the same function:
+
+
+</script>
+
+
+
+<!-- The function above does not belong to any object. But in JavaScript there is always a default global object.
+
+ In HTML the default global object is the HTML page itself, so the function above "belongs" to the HTML page.
+
+In a browser the page object is the browser window. The function above automatically becomes a window function. -->
+</body>
+</html>
+
+

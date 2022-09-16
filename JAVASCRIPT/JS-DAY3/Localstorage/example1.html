@@ -1,0 +1,42 @@
+<!-- The localStorage Object:
+The localStorage object stores the data with no expiration date. The data will 
+not be deleted when the browser is closed, and will be available the next day, week, or year. 
+window.localStorage-->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<!-- data will set throgh this id -->
+<div id="result"></div> 
+
+<script>
+if (typeof(Storage) !== "undefined") {  // Check browser support
+
+  // Store
+  localStorage.setItem("lastname", "Smith");//in this case, the `lastname` is the key while `Smith` is the value.
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+</body>
+</html>
+
+
+<!-- 
+Example explained:
+
+Create a localStorage name/value pair with name="lastname" and value="Smith"
+Retrieve the value of "lastname" and insert it into the element with id="result"
+The example above could also be written like this:
+
+// Store
+localStorage.lastname = "Smith";
+// Retrieve
+document.getElementById("result").innerHTML = localStorage.lastname;
+The syntax for removing the "lastname" localStorage item is as follows:
+
+localStorage.removeItem("lastname"); -->
