@@ -1,0 +1,37 @@
+<!-- Create  a button click function inside a class and show the input value in console  -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class </h2>
+ <!-- template part -->
+<input type="text" id="userName"> 
+<button onclick="show()">Click</button> 
+
+<script>
+//logical part
+class Student { // defining a class
+  constructor(name) {  //The class has one initial properties: "name". Access the value of class  (parameterised constructor) .
+    this.name = name;   //globally you  can access class  data thats way i have used this.name
+    //console.log(this.name);
+
+  }
+
+  showInputData() {   //this method is used to show for a specific data (input data).
+    console.log(this.name);
+  }
+}
+
+
+
+function show() { // function created with name show
+  let name = document.getElementById("userName").value;  // uses to access the specific id and get the input value and that value will store in  a specific id.
+  var st = new Student(name);  //creating an object of Student   
+  st.showInputData();  //call that function inside the class 
+}
+
+</script>
+
+</body>
+</html>

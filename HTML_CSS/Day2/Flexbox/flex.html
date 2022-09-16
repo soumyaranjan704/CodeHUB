@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+} */
+</style>
+</head>
+<body>
+
+<h1>Create a Flex Container</h1>
+
+<div class="flex-container">
+  <div class="div1">1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
+<!-- The <em> tag is used to define emphasized text. The content inside is typically displayed in italic -->
+<p>Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
+
+</body>
+</html>
+
+

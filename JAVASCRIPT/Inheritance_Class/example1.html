@@ -1,0 +1,32 @@
+<!-- Inheritance class -->
+<!-- 
+Inheritance is an important concept in Object-Oriented Programming. This is a mechanism that allows 
+the child class to acquire all the properties and methods of a parent class (except private properties and methods).
+ We use the keyword extends in a class declaration or a class expression to create a child class of another class.
+
+ Note: If there is a constructor present in the subclass, it needs to first call super() before using “this”. -->
+
+ <html>
+  <body>
+    <script>
+      class Shape{ //defining a class
+        constructor(color){
+          this.color = color;
+        }
+        msg(){ //parent class method
+          document.write("The color of the shape is " + this.color + "</br>");
+        }
+      }
+      class Circle extends Shape{ //inheritance
+        constructor(color){
+          super(color); //using the constructor of parent class to set property
+        }
+        msg(){ //child class method
+          document.write("The color of the circle is " + this.color + "</br>");
+        }
+      }
+      var c1 = new Circle("Blue"); //creating a new instance of the child class
+      c1.msg(); //calling child method
+    </script>
+  </body>
+</html>
