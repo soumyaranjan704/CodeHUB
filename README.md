@@ -1,4 +1,5 @@
 # CodeHUB
+
 # Contents
 Check the PDF files for Output
 
@@ -39,70 +40,62 @@ Follow the Folder Hierarchy.
 
 # 2.JS-DAY2
     2. 1 Async_Await
-    2.2 
+    2. 2 CustomAttributes
+    2. 3 EventBindings
+    2. 4 Object Entries
+    2. 5 Object Keys
+    2. 6 Pass By Value
+    2. 7 Pass By Reference
 
 # 3.JS-DAY3
+     3.1 ArrayIteration
+            3.1.1 ArrayFilter
+            3.1.2 ArrayFind
+            3.1.3 ArrayForEach
+            3.1.4 ArrayIndexOf
+            3.1.5 ArrayLastIndexOf
+            3.1.6 ArrayMap
+            3.1.7 ArrayReduce
+
+    3.2  CreateElement
+    3.3  Current_Date_Time
+    3.4  JS_String_Properties
+    3.5  JSON 
+        3.5.1 Json Parse
+        3.5.2 Json Stringify
+
+    3.6 Localstorage
+    3.7 Objects
 
 
 # 4.JS-DAY4
+    4.1 Array Unshift
+    4.2 Arrow Function
+    4.3 For of Loop
+    4.4 JS Callback
+    4.5 js Errors
 
 
 # 5.JS-DAY5
+    5.1 JSFunctionInvocation
+    5.2 Loops 
+         5.2.1      while
+         5.2.2     do-while
+         5.2.3       for
 
-
+    5.3 RegeX
+    5.4 This Keyword uses
+    5.5 Window_Location
+    5.6 Window_object
 
 # 6.JS-DAY6
 
-
-
-
-
-
-# DAY 2
-
-1. JS : why, where and how to use.
-2. Import external JS
-3. JS functions
-4. Scope
-5. ES6 standards
-6. JS classes : usages.
-7. Function pointers
-8. Add/Remove event handlers
-
-   
-# DAY 3: Html-Js:
-
-1. Events : bindings, unbinding.
-2. Why we require event handlers?
-3. Pass by value/reference.
-4. Async/await functions
-5. Object Keys (Object.keys()) 
-6. Object Entries (Object.entries())
-7. CustomAttributes 
-
-# DAY 4: 
-1. Localstorage
-2. Array Iteration
-3. Objects
-4. CreateElement
-5. Json
-6. JS_String_Properties 
-7. currentDate_N_Time
-
-# Day 5:
-1. Arrow Function
-2. for..of loop
-3. ArrayUnshift
-4. JS Errors(try,catch,throw)
-5. JS Callbacks
-
-# Day 6:
-1. JS Function Invocation
-2. Loops
-3. RegeX (Regular Expression)
-4. This Keyword (this)
-5. Window_Location
-6. Window_Object
+  6.1 Datastructures 
+         6.1.1 Stack
+         6.1.2 Queue
+         6.1.3 linked List
+         6.1.4 Binary Tree 
+         6.1.5 Graph
 
 
 # Run HTML_JS_CODE
