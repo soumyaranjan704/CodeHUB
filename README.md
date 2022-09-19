@@ -4,48 +4,45 @@
 Check the PDF files for Output
 
 Follow the Folder Hierarchy.
+
 # HTML_CSS
 
-# DAY 1
 1. HTML 
-     1.1 Tags/Controls
-     1.2 Attributes
+     1.1 Introduction
+     1.2 Tags/Controls
+     1.3 Html Table
+     1.4 Image
+     1.5 Custom Attributes
 	 
 2. CSS
-   2.1 Why, What and How to use.
-   2.2 Import an external CSS.
-   2.3 CSS classes, overrides, hierarchy.
+   2.1 External CSS
+   2.2 Selector
+   2.3 Flexbox
+   2.4 Css_Variables
+   2.5 Responsive
 
-# DAY 2
-1. Flexbox
-2. HTML_Table
-3. IMAGE
-4. Responsive
-
-# DAY 3
-1. Bootstrap Use
+3. Bootstrap 
+    3.1 Bootstrap basic example
 
 
 # JAVASCRIPT 
 
-# 1.JS-DAY1
-   1. 1 Introduction
-   1. 2 Higher_Order_Function_Delegate
-   1. 3 Inheritance_Class
-   1. 4 JS_CLASSES
-   1. 5 JS_EventHandler
-   1. 6 JS_SCOPE
-   1. 7 Json
-   1. 8  ES6 
+# A.JS-DAY1
+    1 Introduction
+    2 Loops
+    3 Js String properties
+    4 Array Iteration
+    5 Current Date and Time
+    6 Js classes
 
-# 2.JS-DAY2
-    2. 1 Async_Await
-    2. 2 CustomAttributes
-    2. 3 EventBindings
-    2. 4 Object Entries
-    2. 5 Object Keys
-    2. 6 Pass By Value
-    2. 7 Pass By Reference
+
+# B.JS-DAY2
+    7 Inheritance class
+    8 Js Scope
+    9 Js Event handler
+    10 JSON
+    11 Async await
+    12 Higher order function/ Function Delegate
 
 # 3.JS-DAY3
      3.1 ArrayIteration
