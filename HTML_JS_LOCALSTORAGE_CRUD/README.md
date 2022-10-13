@@ -3,13 +3,17 @@
 ## This Project will give some idea about Class Inheritance, File Organization, Local Storage,Styling , Structuring Layout
 
 <hr>
- <h2>This Project is WrapUp in 5 Folders </h2>
-    1. <strong>Model</strong> <br>
-    2. <strong>Implementation</strong> <br>
-    3. <strong>Pages</strong> <br>
-    4. <strong>Scripts</strong><br>
-    5. <strong> README.md </strong>
+ <h2>This Project is WrapUp in 6 Folders </h2>
+    1. <strong>Images</strong> <br>
+    2. <strong>Model</strong> <br>
+    3. <strong>Implementation</strong> <br>
+    4. <strong>Pages</strong> <br>
+    5. <strong>Scripts</strong><br>
+    6. <strong> README.md </strong>
 <hr>
+
+> ## Model Folder
+- All Pages structure with outputs.
 
 > ## Model Folder
 
@@ -31,7 +35,7 @@ Inside Folder those files are there.
    <br>
 
 
- ## Pages
+ > ## Pages
 - This is Where Our Html files Lies for Everything our Structure of Webpage and Styling Everything. 
 > Note: Internal CSS is Used
 
@@ -57,5 +61,5 @@ Inside Folder those files are there.
   ## How to run this project
   After Download /clone the repository then you need to follow the details:
   - 1. You need to install this `live server(five server) by Yannick `extension on your VS CODE. NB.Without live server extension you can't run this project.
-  - 2. After that open that folder then open the pages folder > right click > open with five server  option will  be there then it will open in your browser
+  - 2. After that open that folder then open the pages folder >  `index.html` > right click on index.html file > open with five server  option will  be there then it will open in your browser.
   
