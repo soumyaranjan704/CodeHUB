@@ -12,7 +12,7 @@
     6. <strong> README.md </strong>
 <hr>
 
-> ## Model Folder
+> ## Image Folder
 - All Pages structure with outputs.
 
 > ## Model Folder
