@@ -3,7 +3,7 @@
 ## This Project will give some idea about Class Inheritance, File Organization, Local Storage,Styling , Structuring Layout
 
 <hr>
- <h2>This Project is WrapUp in 6 Folders </h2>
+ <h2>This Project Contains 6 Folders </h2>
     1. <strong>Images</strong> <br>
     2. <strong>Model</strong> <br>
     3. <strong>Implementation</strong> <br>
@@ -64,3 +64,7 @@ Inside Folder those files are there.
   - 1. You need to install this `live server(five server) by Yannick `extension on your VS CODE. NB.Without live server extension you can't run this project.
   - 2. After that open that folder then open the pages folder >  `index.html` > right click on index.html file > open with five server  option will  be there then it will open in your browser.
   
+
+  ## Some important links to read 
+  - 1. Class Inheritance- `https://javascript.info/class-inheritance`
+  - 2. Localstorage - `https://www.geeksforgeeks.org/javascript-localstorage/#:~:text=The%20localStorage%20is%20the%20read,that%20is%20stored%20within%20localStorage`.
