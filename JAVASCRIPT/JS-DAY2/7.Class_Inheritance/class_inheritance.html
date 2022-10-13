@@ -1,0 +1,56 @@
+<!-- Inheritance class -->
+<!-- 
+Inheritance is an important concept in Object-Oriented Programming. This is a mechanism that allows 
+the child class to acquire all the properties and methods of a parent class (except private properties and methods).
+ We use the keyword extends in a class declaration or a class expression to create a child class of another class.
+
+ Note: If there is a constructor present in the subclass, it needs to first call super() before using “this”. -->
+
+<html>
+  <body>
+    <script>
+      // parent class
+      class Person {
+        constructor(name) {
+          this.name = name;
+          this.occupation = "unemployed";
+        }
+
+        greet() {
+          console.log(`Hello ${this.name}.`);
+        }
+      }
+
+      // inheriting parent class
+      class Student extends Person {
+        constructor(name) {
+          // call the super class constructor and pass in the name parameter
+          super(name);
+
+          // Overriding an occupation property
+          this.occupation = "Student";
+        }
+
+        // overriding Person's method
+        greet() {
+          console.log(`Hello student ${this.name}.`);
+          console.log("occupation: " + this.occupation);
+        }
+      }
+
+      let p = new Student("Jack");
+      p.greet();
+    </script>
+  </body>
+</html>
+
+<!-- Check the output in browser console
+Hello student Jack.
+occupation: Student -->
+
+<!-- Uses of Inheritance
+Since a child class can inherit all the functionalities of the parent's class, this allows code reusability.
+Once a functionality is developed, you can simply inherit it. No need to reinvent the wheel. This allows for cleaner code and easier to maintain.
+Since you can also add your own functionalities in the child class, you can inherit only the useful functionalities and define other required features. -->
+
+<!-- Follow for more https://www.programiz.com/javascript/inheritance -->
