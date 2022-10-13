@@ -29,14 +29,15 @@ Inside Folder those files are there.
 
  - BaseImplementation -> All the Related Function are Defined here
 
-- DepartmentImplementation -> all the Related Function related to Department and also Inheriting from BaseImplementation  
+- DepartmentImplementation -> All the Related Function related to Department and also Inheriting from BaseImplementation  
 
-- EmployeeImplementation -> all the Related Function related to Employee and also Inheriting from BaseImplementation  
+- EmployeeImplementation -> All the Related Function related to Employee and also Inheriting from BaseImplementation  
    <br>
 
 
  > ## Pages
-- This is Where Our Html files Lies for Everything our Structure of Webpage and Styling Everything. 
+ - Inside this folder all the .html files added.
+ - All the pages are built using Html and css. 
 > Note: Internal CSS is Used
 
 <br>
@@ -53,7 +54,7 @@ Inside Folder those files are there.
   - <u>EmployeeAdd.js</u> : IT tells us how to add Employee in the List
   - <u>EmployeeEdit.js</u> : it take ID From Url to Edit the Data inside our Local Storage
   - <u> EmployeeList</u> : Create TableFor Employee and also made with UI EventListener for Edit and Delete button
-  - <u>Pagination.js</u> : Pagination Function How It Works
+  - <u>Pagination.js</u> : Pagination Functionality added here.
   - <u>Utility.js</u> : this is some Utility Function Which are common in Files, Like  CreateTable, URlDecoder, checkAttribute  
   - can be Use Directly via importing  
 

@@ -1,4 +1,4 @@
-//  Creating base Implementation to PErform all the related and Similar Task  
+//  Creating base Implementation to Perform all the related and Similar Task  
 export default class BaseImplementation
  {
   // Providing some Basics Attribute to Implementation to Store Data Related Data
