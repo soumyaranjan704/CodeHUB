@@ -1,37 +1,48 @@
-# Employee Department Project
+# Employee Department CRUD Operation Using Localstorage
 
-## This Project Will Give us a Whole Some Idea about How Classes, File Organization, Local Storage, Styling , Structuring Layout
+## This Project will give some idea about Class Inheritance, File Organization, Local Storage,Styling , Structuring Layout
 
 <hr>
-- <h2>This Project is WrapUp in 5 Folders </h2>
+ <h2>This Project is WrapUp in 5 Folders </h2>
     1. <strong>Model</strong> <br>
     2. <strong>Implementation</strong> <br>
     3. <strong>Pages</strong> <br>
     4. <strong>Scripts</strong><br>
-    5. <strong> Readme.md </strong>
+    5. <strong> README.md </strong>
 <hr>
 
 > ## Model Folder
 
-- This is Made Up of BaseModel of the States or attributes which we are going to use in folder, which is also
-- Where we have 2 more Class EmployeeModel and DepartmentModel which are also Inheriting From Base Model
+- This is Made Up of BaseModel of the States or attributes which we are going to use in folder
+- Where we have two  more Classes  EmployeeModel and DepartmentModel which are also Inheriting From Base Model.
+- Need to follow this link `https://javascript.info/class-inheritance` to know about the class inheritance.
 
 > ## Implementation Folder
+Inside Folder those files are there.
+- 1.BaseImplementation
+- 2.DepartmentImpementation
+- 3.EmployeeImplementation
 
-- this is build with 3 Files which hare Implementation for our base Model More like Interface.
-- all the Logic is in these 3 Files - BaseImplementation -> all the Related Function are Defined Here - DepartmentImplementation -> all the Related Function related to Department and also Inheriting from BaseImplementation  
-   - EmployeeImplementation -> all the Related Function related to Employee and also Inheriting from BaseImplementation  
+ - BaseImplementation -> All the Related Function are Defined here
+
+- DepartmentImplementation -> all the Related Function related to Department and also Inheriting from BaseImplementation  
+
+- EmployeeImplementation -> all the Related Function related to Employee and also Inheriting from BaseImplementation  
    <br>
-  > ## Pages
-- This is Where Our Html files Lies for Everything our Structure of Webpage and Styling Everything. > Note: Internal CSS is Used
-  <br>
+
+
+ ## Pages
+- This is Where Our Html files Lies for Everything our Structure of Webpage and Styling Everything. 
+> Note: Internal CSS is Used
+
+<br>
 
 > ## Scripts
 
-- This is Where magic Happens.
+## Inside this folder all .js file plays different role . Check below
 - Consist of multiple Files to do all the Rendering, UI Stuff, Pagination , Utility Functions
 - Made up of 9 Files:
-  - <u>common.js</u> : This Files Is Just for Doing Drop Down Animation for Menu.
+  - <u>common.js</u> : This Files Is Just for Doing Drop Down Animation for Menu. Now  we are not using this we are just using li links for better understand.
   - <u>departmentAdd.js</u> : IT tells us how to add Department in the List
   - <u>DepartmentEdit.js</u> : it take ID From Url to Edit the Data inside our Local Storage
   - <u> DepartmentList</u> : Create TableFor Department and also made with UI EventListener for Edit and Delete button
@@ -39,4 +50,5 @@
   - <u>EmployeeEdit.js</u> : it take ID From Url to Edit the Data inside our Local Storage
   - <u> EmployeeList</u> : Create TableFor Employee and also made with UI EventListener for Edit and Delete button
   - <u>Pagination.js</u> : Pagination Function How It Works
-  - <u>Utility.js</u> : this is some Utility Function Which hare common in Files, Like like CreateTable, URlDecoder, checkAttribute  - can be Use Directly via importing  
+  - <u>Utility.js</u> : this is some Utility Function Which are common in Files, Like  CreateTable, URlDecoder, checkAttribute  
+  - can be Use Directly via importing  

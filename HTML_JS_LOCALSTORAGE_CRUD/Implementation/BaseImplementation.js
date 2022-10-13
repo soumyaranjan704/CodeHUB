@@ -52,17 +52,27 @@ export default class BaseImplementation
   }
 
   Delete(id) {
-    // Deleting Data from the Collection using Filter MEthod
+    // Deleting Data from the Collection using Filter Method
     this.collection = this.collection.filter((item) => item.id != id);
     // Updating LocalStorage
     this.UpdateStore(this.key_main);
   }
 
   UpdateStore(key) {
-    // this function i there to Update Local Storage 
+    // this function used to update the localstorage data
     localStorage.setItem(key,JSON.stringify(this.collection))
-    
+
+/* First, we’re creating a function called UpdateStore.
+ Next, we’re setting the localStorage.setItem function to a variable called setItem.
+ Then, we’re setting the key to the localStorage key we’re going to use, which is “collection”.
+ Next, we’re setting the value to the JSON.stringify of the collection object.
+ Finally, we’re setting the localStorage.setItem function to the setItem variable.
+
+ */
   }
+
+
+
   // This Function Will Help us find the max index in the list using reduce function  
   arrayMax(arr) {
     let max_id = arr.length === 0 ? 0 : null;
@@ -79,6 +89,18 @@ export default class BaseImplementation
 
     return max_id;
   }
+
+/*
+1. The arrayMax function takes an array of objects as an argument.
+2. The function returns the maximum value of the id property of the objects in the array.
+3. If the array is empty, the function returns 0.
+4. If the array has only one object, the function returns the id property of that object.
+5. If the array has more than one object, the function returns the maximum value of the id property of the objects in the array.
+
+*/
+
+
+
   // This Function will give the a array of Related Search  
   search(searchText)
   { 
