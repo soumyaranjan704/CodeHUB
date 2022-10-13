@@ -52,3 +52,10 @@ Inside Folder those files are there.
   - <u>Pagination.js</u> : Pagination Function How It Works
   - <u>Utility.js</u> : this is some Utility Function Which are common in Files, Like  CreateTable, URlDecoder, checkAttribute  
   - can be Use Directly via importing  
+
+
+  ## How to run this project
+  After Download /clone the repository then you need to follow the details:
+  - 1. You need to install this `live server(five server) by Yannick `extension on your VS CODE. NB.Without live server extension you can't run this project.
+  - 2. After that open that folder then open the pages folder > right click > open with five server  option will  be there then it will open in your browser
+  
