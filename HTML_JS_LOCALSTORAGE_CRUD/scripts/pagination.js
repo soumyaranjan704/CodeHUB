@@ -1,5 +1,11 @@
-//   Here Working OF Pagination is Defined 
-// It is Takes An Array Pages and Rows
+
+/**
+ * 
+ * @param {*} pagination  All thr pagination functionlity added here
+ 
+ 
+ */
+
 export default function pagination(dataSet, page, rows) {
     page = +page;
     rows = +rows;

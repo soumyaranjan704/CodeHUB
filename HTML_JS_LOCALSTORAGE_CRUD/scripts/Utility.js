@@ -1,6 +1,13 @@
+
+/**
+ * 
+ * @param {*} CreateTable this Function Will Help you Create Dynamic Table 
+
+ 
+ */
+
 //  All Utility Function Are Declared here
 
-// this Function Will Help you Create Dynamic Table irrespective og ht eNumber og Elements 
 export default function CreateTable(array,tbody,pageState)
 {
     tbody.innerHTML = "";
@@ -30,10 +37,15 @@ export default function CreateTable(array,tbody,pageState)
     document.getElementById("currentPage").textContent = pageState?.page ?? 1;
 } 
 
+/**
+ * 
+ * @param {*} checkAttribute  1. First, it checks if the current table row has an attribute called id.
+2. If it does, it returns the value of the id attribute.
+3. If it doesn’t, it returns -1.
+ 
+ */
 
 
-
-// Check whether the attribute is there or not
 export function checkAttribute(t)
 { 
     let row = t.parentElement.parentElement;
@@ -48,8 +60,12 @@ export function checkAttribute(t)
     }
     return -1
 }
+/**
+ * 
+ * @param {*} URLDecoder 
+ * @returns  this Function Decode the URl and give you the id 
 
-//  this Function Decode the URl and give you the id 
+ */
 export function URLDecoder(URL)
 {
 let [Path] = new URLSearchParams(URL )

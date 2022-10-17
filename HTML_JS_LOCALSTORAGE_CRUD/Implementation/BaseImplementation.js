@@ -1,18 +1,22 @@
-//  Creating base Implementation to Perform all the related and Similar Task  
+/**
+ Base for all implementation for pages
+*/ 
 export default class BaseImplementation
  {
-  // Providing some Basics Attribute to Implementation to Store Data Related Data
+  // Initializing the collection with blank array.
   collection = [];
-  // this is there the Key inside Local Storage where i your Data lies 
+  
   key_main = "";
 
-// to construct main Key
+
   constructor(key) {
-    //get it from session
+    
     // setting Main Key
     this.key_main = key;
     
+	// get data in serialized form from session using key 'key' example for Employees it will be 'employees' which is passed from the 'EmployeeImplementation' class constructor call of super('employees')
     let collection_temp = localStorage.getItem(key);
+	
     //  checking , Is localStorage has the collection or not , if Not setting it to Empty array 
     this.collection = collection_temp != null ? JSON.parse(collection_temp) : [];
 
@@ -20,7 +24,7 @@ export default class BaseImplementation
 
   /**
    * This function will be used to add data to session/local
-   * @param {*} model  Model that needs to be added
+   * @param {*} model  Model that needs to be added to the collection
    */
   Add(model) {
     // finding MaxID From the List
@@ -32,10 +36,16 @@ export default class BaseImplementation
     // using Spread operator to push Data 
     this.collection = [...this.collection, model];
     // there After updating LocalStorage
-    this.UpdateStore(this.key_main);
+    this.UpdateStore(this.key_main, this.collection);
     return true;
   }
 
+/**
+ *Update the model for the given id in the collection
+ * @param {*} id  id for which data needs to be updated
+ * @param {*} model  Model that needs to be added to the collection,
+ 
+*/
   Update(id, model) {
     let index;
     // Finding index of data in the collection according to given Id so that we can Update it
@@ -51,6 +61,11 @@ export default class BaseImplementation
     this.UpdateStore(this.key_main);
   }
 
+
+/**
+ *Delete the record that matches the id from the collection
+ * @param {*} id  id for which data needs to be updated
+ */
   Delete(id) {
     // Deleting Data from the Collection using Filter Method
     this.collection = this.collection.filter((item) => item.id != id);
@@ -58,9 +73,13 @@ export default class BaseImplementation
     this.UpdateStore(this.key_main);
   }
 
-  UpdateStore(key) {
+/**
+ *Function to update to store,
+ * @param {*} id  id for which data needs to be updated
+ */
+  UpdateStore(key, collection) {
     // this function used to update the localstorage data
-    localStorage.setItem(key,JSON.stringify(this.collection))
+    localStorage.setItem(key,JSON.stringify(collection))
 
 /* First, we’re creating a function called UpdateStore.
  Next, we’re setting the localStorage.setItem function to a variable called setItem.
